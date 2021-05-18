@@ -7,9 +7,7 @@
 #define swap(x, y) do { typeof(x) SWAP = x; x = y; y = SWAP; } while (0);
 using namespace std;
 
-int partition(int arr[],int left,int right);
-
-void quickSort(int arr[],int lb,int rb);
+void quickSort(int arr[],int left,int right);
 
 int main()
 {
@@ -40,12 +38,12 @@ int partition(int arr[],int left,int right)
     return iterate-1;
 
 }
-void quickSort(int arr[],int lb,int rb)
+void quickSort(int arr[],int left,int right)
 {
 
-    if (lb>=rb)return;
+    if (left>=right)return;
     
-    int mid = partition(arr,lb,rb);
-    quickSort(arr,lb,mid-1);
-    quickSort(arr,mid+1,rb);
+    int mid = partition(arr,left,right);
+    quickSort(arr,left,mid-1);
+    quickSort(arr,mid+1,right);
 }

@@ -4,7 +4,7 @@
 #define putarr(arr) for(auto &i:arr)cout<<i<<" ";
 using namespace std;
 
-void merge(int arr[], int l, int m, int r)
+void merge(int* arr, int l, int m, int r)
 {
     int nL = m - l + 1;
     int nR = r - m;
@@ -46,7 +46,7 @@ void merge(int arr[], int l, int m, int r)
         k++;
     }
 }
-void mergeSort(int arr[], int l, int r)
+void mergeSort(int* arr, int l, int r)
 {
     int half = (l+r)/2;
     if (l>=r)return;
@@ -58,9 +58,9 @@ int main()
 {
     ll n;
     cin>>n;
-    int toBeSorted[n];  
-    getarr(toBeSorted);
-    mergeSort(toBeSorted,0,n-1);
-    putarr(toBeSorted);
+    int arr[n];  
+    getarr(arr);
+    mergeSort(arr,0,n-1);
+    putarr(arr);
     return 0;
 }
