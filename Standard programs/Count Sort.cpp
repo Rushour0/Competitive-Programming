@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 #define ll long long int
-#define getarr(arr) for(auto &i:arr)cin>>i;
-#define putarr(arr) for(auto &i:arr)cout<<i<<" ";
+    #define getarr(arr) for(auto &i:arr)cin>>i;
+    #define putarr(arr) for(auto &i:arr)cout<<i<<" ";
 #define set0(arr) memset(arr,0,sizeof(arr));
 using namespace std;
 
